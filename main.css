@@ -1,9 +1,24 @@
+.header {
+    text-align: center;
+  }
+
 .flex-container {
     display: flex;
     justify-content: center
 
   }
 
-  .container {
-    padding: 5%;
+  .body-left {
+    padding: 5px;
+  }
+  .body-center {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .body-right {
+    padding: 5px;
+  }
+
+  .footer {
+    text-align: center;
   }
