@@ -1,24 +1,29 @@
 .header {
+    padding: 5%;
     text-align: center;
+    background-color: chartreuse;
   }
 
-.flex-container {
+.flex-body {
     display: flex;
-    justify-content: center
 
   }
 
   .body-left {
-    padding: 5px;
+    padding: auto;
+    background-color: blue;
   }
   .body-center {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 15%;
+    background-color: blueviolet;
   }
   .body-right {
-    padding: 5px;
+    padding: auto;
+    background-color: brown;
   }
 
   .footer {
+    padding: 5%;
     text-align: center;
+    background-color: darkorchid;
   }
