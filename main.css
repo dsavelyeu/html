@@ -10,15 +10,15 @@
   }
 
   .body-left {
-    padding: 15%;
+    margin: auto;
     background-color: blue;
   }
   .body-center {
-    padding: 16%;
+    margin: auto;
     background-color: blueviolet;
   }
   .body-right {
-    padding: 15%;
+    margin: auto;
     background-color: brown;
   }
 
