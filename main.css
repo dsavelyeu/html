@@ -1,24 +1,30 @@
 .header {
+  flex: 1;
     padding: 5%;
     text-align: center;
     background-color: chartreuse;
   }
 
 .flex-body {
+    border: solid 4px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+  .flex-body-child {
+    flex: 1;
 
   }
 
   .body-left {
-    margin: auto;
     background-color: blue;
+    min-width: 500px;
   }
   .body-center {
-    margin: auto;
     background-color: blueviolet;
   }
   .body-right {
-    margin: auto;
     background-color: brown;
   }
 
