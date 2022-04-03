@@ -1,12 +1,15 @@
 body,html {
   height: 100%;
-  padding: 0;
-  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 
 .body-header {
-  min-height: 150px;
+  min-width: 1060px;
+  height: 20%;
+  min-height: 100px;
+  padding: 30px ;
 }
 
 
@@ -19,6 +22,7 @@ body,html {
 
   .flex-body-child {
 flex: 1;
+padding: 30px ;
   }
 
   .body-header{
@@ -26,7 +30,11 @@ flex: 1;
   }
   .body-article {
     background-color: rgb(228, 221, 238);
+    flex-grow: 3;
+    min-width: 700px;
   }
   .body-aside {
     background-color: rgb(109, 99, 99);
+    flex-grow: 1;
+    min-width: 300px;
   }
