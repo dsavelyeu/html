@@ -42,7 +42,21 @@ h3 {
 
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./img/garrettParker.png);
+    background-repeat: no-repeat;
 
+    height: auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+/******************** SECTION HEADER ********************/
 .header {
     display: flex;
     justify-content: space-between;
@@ -108,20 +122,8 @@ h3 {
     color: white;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    background-image: url(./img/garrettParker.png);
-    background-repeat: no-repeat;
 
-    height: auto;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    overflow: hidden;
-    background-color: white;
-}
-
+/******************** SECTION playYourTrip ********************/
 .section-planYourTrip {
     display: flex;
     padding-bottom: 221px;
@@ -203,7 +205,7 @@ h3 {
     text-align: center;
 }
 
-.stepsH2 {
+.steps-h2 {
     font-family: 'Red Hat Text', sans-serif;
     margin: 0;
     font-size: 40px;
@@ -217,14 +219,14 @@ h3 {
     justify-content: space-between;
 }
 
-.stepsSquare {
+.steps-square {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 320px;
 }
 
-.stepsImg {
+.steps-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +239,7 @@ h3 {
 
 }
 
-.stepsTxt {
+.steps-txt {
     margin-top: 30px;
     font-family: 'Aleo', serif;
     font-size: 20px;
