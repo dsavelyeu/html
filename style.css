@@ -56,15 +56,23 @@ h3 {
     background-color: white;
 }
 
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+
 /******************** SECTION HEADER ********************/
 .header {
     display: flex;
-    justify-content: space-between;
     height: 90px;
+    position: fixed;
     width: 100%;
     max-width: 1440px;
     background-color: #F2785CB2;
-
+    justify-content: space-between;
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 
 }
@@ -126,6 +134,7 @@ h3 {
 /******************** SECTION playYourTrip ********************/
 .section-planYourTrip {
     display: flex;
+    padding-top: 90px;
     padding-bottom: 221px;
 }
 
@@ -333,7 +342,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    padding-bottom: 45px;
+    padding-bottom: 48px;
 }
 
 .stories-columns {
@@ -375,11 +384,17 @@ h3 {
 
 .footer {
     height: 60px;
+    min-height: 60px;
+
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 120px;
-    padding-left: 120px;
+
+
 }
 
 .footer-txt {

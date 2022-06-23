@@ -8,8 +8,10 @@
     <title>travel1</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Magra:wght@700&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Magra:wght@700&family=Red+Hat+Text:wght@500&display=swap"
+        rel="stylesheet">
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -17,27 +19,28 @@
 <body>
     <div class="container">
 
+        <!------------ HEADER ------------>
+        <header class="header">
+
+            <div class="logo">
+                <img src="./img/logo.svg" width="30" height="30" alt="logo">
+                <p class="logo-txt">Travel Portal</p>
+            </div>
+
+            <nav class="nav">
+                <a class="a-nav" href="#main">How It Works</a>
+                <a class="a-nav" href="#trip">Plan Your Trip</a>
+                <a class="a-nav" href="#destinations">Destinations</a>
+                <a class="a-nav" href="#stories">Travel Stories</a>
+            </nav>
+
+            <button class="btn-login"><a class="a-btn-login" href="#">Login</a></button>
+
+        </header>
 
         <main class="main" id="main">
 
-            <!------------ HEADER ------------>
-            <header class="header">
 
-                <div class="logo">
-                    <img src="./img/logo.svg" width="30" height="30" alt="logo">
-                    <p class="logo-txt">Travel Portal</p>
-                </div>
-
-                <nav class="nav">
-                    <a class="a-nav" href="#main">How It Works</a>
-                    <a class="a-nav" href="#trip">Plan Your Trip</a>
-                    <a class="a-nav" href="#destinations">Destinations</a>
-                    <a class="a-nav" href="#stories">Travel Stories</a>
-                </nav>
-
-                <button class="btn-login"><a class="a-btn-login" href="#">Login</a></button>
-
-            </header>
 
             <!------------- SECTION planYourTrip ------------>
             <section class="section-planYourTrip">
@@ -212,28 +215,7 @@
 
                     </div>
 
-                    <!------------ FOOTER ------------>
-                    <footer class="footer">
-                        <div>
-                            <a href="https://github.com/dsavelyeu/"><img style="margin-right: 20px;" class="rsLogo"
-                                    src="./img/github.png" width="33.65" height="33.65" alt="github"></a>
-                            <a href="https://rs.school/js/"><img src="./img/rs_school_js.svg" width="70" height="33.65"
-                                    alt="rs-school"></a>
-                        </div>
-                        <p class="footer-txt">All Rights Reserved © Travel Portal</p>
 
-                        <div class="social-media"><a href="#"><img style="margin-right: 20px;"
-                                    src="./svg/akar-icons_instagram-fill.svg" width="33.65" height="33.65"
-                                    alt="inst"></a>
-                            <a href="#"><img src="./svg/akar-icons_video.svg" width="33.65" height="33.65"
-                                    alt="vid"></a>
-                            <a href="#"><img style="margin-left: 20px;" src="./svg/akar-icons_twitter-fill.svg"
-                                    width="33.65" height="33.65" alt="tw"></a>
-
-
-                        </div>
-
-                    </footer>
 
                 </div>
             </section>
@@ -241,6 +223,26 @@
 
         </main>
 
+        <!------------ FOOTER ------------>
+        <footer class="footer">
+            <div>
+                <a href="https://github.com/dsavelyeu/"><img style="margin-left: 120px; margin-right: 20px;"
+                        class="rsLogo" src="./img/github.png" width="33.65" height="33.65" alt="github"></a>
+                <a href="https://rs.school/js/"><img src="./img/rs_school_js.svg" width="70" height="33.65"
+                        alt="rs-school"></a>
+            </div>
+            <p class="footer-txt">All Rights Reserved © Travel Portal</p>
+
+            <div class="social-media"><a href="#"><img style="margin-right: 20px;"
+                        src="./svg/akar-icons_instagram-fill.svg" width="33.65" height="33.65" alt="inst"></a>
+                <a href="#"><img src="./svg/akar-icons_video.svg" width="33.65" height="33.65" alt="vid"></a>
+                <a href="#"><img style="margin-right: 120px; margin-left: 20px;" src="./svg/akar-icons_twitter-fill.svg"
+                        width="33.65" height="33.65" alt="tw"></a>
+
+
+            </div>
+
+        </footer>
 
     </div>
 </body>
