@@ -3,7 +3,10 @@ body {
     height: 100%;
     margin: 0;
     background: #E5E5E5;
+    scroll-behavior: smooth; 
+    /*scroll-padding-top: 90px;     - not needed. .h2 {croll-margin-top: 90px;} instead*/
 }
+
 
 p {
     margin: 0;
@@ -25,6 +28,7 @@ h1 {
 }
 
 h2 {
+    scroll-margin-top: 90px;  /****for anchor links with fixed position of header****/
     font-family: 'Red Hat Text', sans-serif;
     margin: 0;
     font-size: 40px;
