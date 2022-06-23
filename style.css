@@ -42,26 +42,24 @@ h3 {
 
 }
 
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     background-image: url(./img/garrettParker.png);
     background-repeat: no-repeat;
-
-    height: auto;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
     overflow: hidden;
     background-color: white;
 }
 
 
-.container {
-    margin: auto;
-    width: 100%;
-    max-width: 1440px;
-}
+
 
 
 /******************** SECTION HEADER ********************/
