@@ -3,21 +3,13 @@ body {
     height: 100%;
     margin: 0;
     background: #E5E5E5;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
     /*scroll-padding-top: 90px;     - not needed. .h2 {croll-margin-top: 90px;} instead*/
 }
 
 
 p {
     margin: 0;
-}
-
-.a-article {
-    font-family: 'Aleo', serif;
-    font-size: 20px;
-    line-height: 24px;
-    color: #0D606F;
-
 }
 
 h1 {
@@ -28,22 +20,31 @@ h1 {
 }
 
 h2 {
-    scroll-margin-top: 90px;  /****for anchor links with fixed position of header****/
-    font-family: 'Red Hat Text', sans-serif;
+    scroll-margin-top: 90px;
+    /****for anchor links with fixed position of header****/
     margin: 0;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
     font-size: 40px;
+    line-height: 53px;
+
     color: #F2785C;
+
 }
 
 h3 {
     margin: 0;
-    font-family: 'Aleo', serif;
+    margin-top: 1px;
+
+    font-family: 'Aleo';
     font-style: normal;
+    font-weight: 400;
     font-size: 35px;
     line-height: 42px;
+
     color: #0D606F;
-
-
 }
 
 .container {
@@ -83,15 +84,19 @@ h3 {
 .logo {
     display: flex;
     margin-top: 25px;
-    margin-left: 156px;
+    margin-left: 120px;
 }
 
 .logo-txt {
     margin-left: 6px;
-    font-family: 'Magra', sans-serif;
-    font-size: 32px;
-    color: white;
     min-width: 172px;
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #FFFFFF;
 }
 
 .nav {
@@ -101,15 +106,21 @@ h3 {
     justify-content: space-between;
     padding: 0px;
     gap: 42px;
-    min-width: 530px;
+    min-width: 527px;
+    margin-right: 30px;
 }
 
 .a-nav {
-    font-family: 'Red Hat Text', sans-serif;
-    font-size: 16px;
-
     text-decoration: none;
-    color: white;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
 }
 
 .btn-login {
@@ -127,9 +138,13 @@ h3 {
 
 .a-btn-login {
     text-decoration: none;
-    font-family: 'Red Hat Text', sans-serif;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
-    color: white;
+    line-height: 21px;
+
+    color: #FFFFFF;
 }
 
 
@@ -153,11 +168,13 @@ h3 {
 }
 
 .explore-p {
-    font-family: 'Aleo', serif;
-    font-style: italic;
-    font-size: 20px;
-    color: white;
     margin-top: 32px;
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
 }
 
 .explore-search {
@@ -175,10 +192,13 @@ h3 {
 }
 
 .search-txt {
-    font-family: 'Aleo', serif;
-    font-style: italic;
-    font-size: 24px;
     margin-left: 41px;
+
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
 
     color: #F2785C;
 }
@@ -191,15 +211,20 @@ h3 {
     padding: 0;
     border: none;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16); */
     border-radius: 10px;
 }
 
 .a-btn-search {
-    font-family: 'Red Hat Text', sans-serif;
-    font-size: 24px;
-    color: white;
     text-decoration: none;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #FFFFFF;
 }
 
 /******************** SECTION STEPS ********************/
@@ -216,13 +241,6 @@ h3 {
     text-align: center;
 }
 
-.steps-h2 {
-    font-family: 'Red Hat Text', sans-serif;
-    margin: 0;
-    font-size: 40px;
-    color: #F2785C;
-}
-
 .steps-frames {
     margin-top: 40px;
     display: flex;
@@ -234,7 +252,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 320px;
+
+    /* min-width: 320px;*/
 }
 
 .steps-img {
@@ -245,18 +264,22 @@ h3 {
     height: 100px;
     width: 100px;
     line-height: 100px;
-    border-radius: 10px;
+    border-radius: 16px;
 
 
 }
 
 .steps-txt {
     margin-top: 30px;
-    font-family: 'Aleo', serif;
-    font-size: 20px;
-    color: #0D606F;
     text-align: center;
 
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #0D606F;
 }
 
 
@@ -305,26 +328,40 @@ h3 {
 .btn-more {
     display: flex;
     align-items: center;
-
-    gap: 12.5px;
     width: 228px;
-    height: 59px;
-    margin-top: 40px;
+    height: 59px;  
     background: #0D606F;
     padding: 0;
     padding-left: 33.5px;
     border: none;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16); */
     border-radius: 10px;
+}
+
+.btn-see-more {
+    gap: 11.5px;
+    margin-top: 36px;
+}
+
+.btn-find-more {
+    gap: 12.5px;
+    margin-top: 40px;
 }
 
 .a-btn-more {
     text-decoration: none;
-    font-family: 'Red Hat Text', sans-serif;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
     font-size: 24px;
-    color: white;
+    line-height: 32px;
+
+    color: #FFFFFF;
 }
+
+
 
 /******************** SECTION STORIES ********************/
 .section-stories {
@@ -335,7 +372,7 @@ h3 {
 .stories-backgr-img {
     background-image: url(./img/footerBg.jpg);
     min-height: 1331px;
-    margin-top: 46px;
+    margin-top: 40px;
     background-repeat: no-repeat;
 }
 
@@ -344,7 +381,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    padding-bottom: 48px;
+    padding-bottom: 42px;
 }
 
 .stories-columns {
@@ -352,6 +389,7 @@ h3 {
     flex-direction: column;
     width: 100%;
     max-width: 1200px;
+    padding-top: 14px;
 }
 
 .stories-rows {
@@ -361,28 +399,37 @@ h3 {
 }
 
 .stories-p {
-    font-family: 'Aleo', serif;
-
+    text-align: left;
+    margin-top: 23px;
 
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-
+    
     color: #0D606F;
-
-    text-align: left;
-    margin-top: 24px;
+    
 }
 
 .stories-img {
     margin-right: 40px;
     border-radius: 16px;
 
-    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    box-shadow: 0px 4px 4px #0D606F;
 }
 
+.a-article {
+    font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #0D606F;
+
+
+}
 
 .footer {
     height: 60px;
@@ -400,7 +447,15 @@ h3 {
 }
 
 .footer-txt {
-    font-family: 'Red Hat Text', sans-serif;
-    font-size: 16px;
-    color: white;
+    font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+
+color: #FFFFFF;
+}
+
+.social-media{
+    padding-top: 4px;
 }
