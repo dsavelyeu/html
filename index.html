@@ -17,48 +17,51 @@
 </head>
 
 <body>
-    <div class="container">
+    
 
-        <!------------ HEADER ------------>
-        <header class="header">
 
-            <div class="logo">
-                <img src="./img/logo.svg" width="30" height="30" alt="logo">
-                <p class="logo-txt">Travel Portal</p>
-            </div>
-
-            <nav class="nav">
-                <a class="a-nav" href="#main">How It Works</a>
-                <a class="a-nav" href="#trip">Plan Your Trip</a>
-                <a class="a-nav" href="#destinations">Destinations</a>
-                <a class="a-nav" href="#stories">Travel Stories</a>
-            </nav>
-
-            <button class="btn-login"><a class="a-btn-login" href="#">Login</a></button>
-
-        </header>
 
         <main class="main" id="main">
 
+           
 
 
             <!------------- SECTION planYourTrip ------------>
             <section class="section-planYourTrip">
 
-                <div class="indent-left">
-                    <!-- indent left -->
+                 <!------------ HEADER ------------>
+            <header class="header">
+
+                <div class="logo">
+                    <img src="./img/logo.svg" width="30" height="30" alt="logo">
+                    <p class="logo-txt">Travel Portal</p>
                 </div>
 
-                <article class="article-explore">
-                    <h1>Explore the beauty of <br>the World</h1>
-                    <p class="explore-p">Receive personalized recommendations for countries, hotels, activities
+                <nav class="nav">
+                    <ul class="menu">
+                    <li class="menu-style"><a class="a-nav" href="#main">How It Works</a></li>
+                        <li class="menu-style"><a class="a-nav" href="#trip">Plan Your Trip</a></li>
+                            <li class="menu-style"><a class="a-nav" href="#destinations">Destinations</a></li>
+                                <li class="menu-style"><a class="a-nav" href="#stories">Travel Stories</a></li>
+                </ul>
+                </nav>
+
+                <button class="btn-login"><span class="a-btn-login">Login</span></button>
+
+            </header>
+
+           
+
+               
+                    <h1 class="indent">Explore the beauty of <br>the World</h1>
+                    <p class="explore-p indent">Receive personalized recommendations for countries, hotels, activities
                         and more</p>
-                    <div class="explore-search">
+                    <div class="explore-search indent">
                         <p class="search-txt">What would you like to do?</p>
                         <button class="btn-search"><a class="a-btn-search" href="#">Start Planning</a></button>
                     </div>
 
-                </article>
+               
             </section>
 
             <!------------ SECTION STEPS ------------>
@@ -209,13 +212,31 @@
 
                         </div>
 
-                        <button class="btn-more btn-see-more"><img src="./img/vector.svg" width="40" height="40" alt="->">
+                        <button class="btn-more btn-see-more"><img src="./img/vector.svg" width="40" height="40"
+                                alt="->">
                             <a class="a-btn-more" href="#">See More</a>
                         </button>
 
                     </div>
 
+                    <!------------ FOOTER! ------------>
+                    <footer class="footer">
+                        <div>
+                            <a href="https://github.com/dsavelyeu/"><img style="margin-left: 120px; margin-right: 20px;"
+                                    class="rsLogo" src="./img/github.png" width="34" height="34" alt="github"></a>
+                            <a href="https://rs.school/js/"><img src="./img/rs_school_js.svg" width="70" height="34"
+                                    alt="rs-school"></a>
+                        </div>
+                        <p class="footer-txt" style="padding-left: 16px;">All Rights Reserved © Travel Portal</p>
 
+                        <div class="social-media"><a href="#"><img style="margin-right: 16px;"
+                                    src="./svg/akar-icons_instagram-fill.svg" width="34" height="34" alt="inst"></a>
+                            <a href="#"><img src="./svg/akar-icons_video.svg" width="34" height="34" alt="vid"></a>
+                            <a href="#"><img style="margin-right: 120px; margin-left: 16px;"
+                                    src="./svg/akar-icons_twitter-fill.svg" width="34" height="34" alt="tw"></a>
+                        </div>
+
+                    </footer>
 
                 </div>
             </section>
@@ -223,28 +244,9 @@
 
         </main>
 
-        <!------------ FOOTER! ------------>
-        <footer class="footer">
-            <div>
-                <a href="https://github.com/dsavelyeu/"><img style="margin-left: 120px; margin-right: 20px;"
-                        class="rsLogo" src="./img/github.png" width="34" height="34" alt="github"></a>
-                <a href="https://rs.school/js/"><img src="./img/rs_school_js.svg" width="70" height="34"
-                        alt="rs-school"></a>
-            </div>
-            <p class="footer-txt" style="padding-left: 16px;">All Rights Reserved © Travel Portal</p>
-
-            <div class="social-media"><a href="#"><img style="margin-right: 16px;"
-                        src="./svg/akar-icons_instagram-fill.svg" width="34" height="34" alt="inst"></a>
-                <a href="#"><img src="./svg/akar-icons_video.svg" width="34" height="34" alt="vid"></a>
-                <a href="#"><img style="margin-right: 120px; margin-left: 16px;" src="./svg/akar-icons_twitter-fill.svg"
-                        width="34" height="34" alt="tw"></a>
 
 
-            </div>
-
-        </footer>
-
-    </div>
+  
 </body>
 
 </html>
