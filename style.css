@@ -48,6 +48,8 @@ h3 {
     color: #0D606F;
 }
 
+
+/* MAIN */
 .main {
     margin: auto;
     width: 100%;
@@ -62,7 +64,7 @@ h3 {
 
 
 
-/******************** SECTION HEADER ********************/
+/* SECTION HEADER */
 .header {
     padding: 0 120px 0 120px;
     height: 90px;
@@ -94,59 +96,59 @@ h3 {
     color: #FFFFFF;
 }
 
-.nav {
+.main-menu {
     height: 100%;
     margin-right: 70px;
 }
 
-.menu {
+.menu-list {
     display: flex;
     list-style: none;
     margin: 0;
     height: 100%;
-
 }
 
-.menu-style {
-    height: 100%;
-    transition: .5s linear;
-}
-
-.menu-style:hover {
-    background-color: #f2775c;
-
-    cursor: pointer;
+.menu-list-item {
+    display: flex;
+    align-items: center;
 }
 
 .a-nav {
-    display: block;
     text-decoration: none;
     padding-left: 21px;
     padding-right: 21px;
-    padding-top: 35px;
-    padding-bottom: 35px;
 
-    font-family: 'Red Hat Text';
+    font-family: "Red Hat Text";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
 
-    color: #FFFFFF;
+    color: #ffffff;
+    transition: 0.5s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
-
+.a-nav:hover {
+    background-color: #f2775c;
 }
 
 .btn-login {
-    background: #0D606F;
+    background-color: #0D606F;
     padding: 10px 30px 10px 30px;
     border: none;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
+
+    transition: .3s linear;
 }
 
 .btn-login:hover {
+    background-color: #0d606f91;
     cursor: pointer;
 }
 
@@ -163,11 +165,11 @@ h3 {
 }
 
 
-/******************** SECTION playYourTrip ********************/
-.section-planYourTrip {
+/* SECTION PLAN-YOUR-TRIP */
+.section-plan-your-trip {
     background-image: url(./img/garrettParker.png);
-   background-size: cover; 
-  width: 100%;
+    background-size: cover;
+    width: 100%;
     max-width: 1440px;
 
     display: flex;
@@ -180,7 +182,7 @@ h3 {
 }
 
 
-.explore-p {
+.explore-txt {
     margin-top: 32px;
     font-family: 'Aleo';
     font-style: italic;
@@ -190,23 +192,22 @@ h3 {
     color: white;
 }
 
-.explore-search {
+.search-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 892px;
+    max-width: 833px;
     height: 95px;
     margin-top: 46px;
-    min-width: 600px;
+    padding-left: 41px;
+    padding-right: 18px;
 
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
 }
 
-.search-txt {
-    margin-left: 41px;
-
+.search-form-txt {
     font-family: 'Aleo';
     font-style: italic;
     font-weight: 400;
@@ -216,21 +217,10 @@ h3 {
     color: #F2785C;
 }
 
-.btn-search {
-    width: 228px;
-    height: 59px;
-    margin-right: 18px;
-    background: #0D606F;
-    padding: 0;
-    border: none;
-
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16); */
-    border-radius: 10px;
-}
-
-.a-btn-search {
+.search-link {
     text-decoration: none;
-
+    padding: 14px 34px 14px 34px;
+     
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
@@ -238,38 +228,43 @@ h3 {
     line-height: 32px;
 
     color: #FFFFFF;
+    background: #0D606F;
+
+    border-radius: 10px;
+    transition: .3s linear;
+}
+
+.search-link:hover {
+    background: #0d606f91;
+    cursor: pointer;
 }
 
 /******************** SECTION STEPS ********************/
 .section-steps {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  width: 100%;
+  
     padding-top: 80px;
 }
 
-
-.article-steps {
+.steps-pattern {
+    margin-top: 40px;
     width: 100%;
     max-width: 1177px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .steps-frames {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.steps-square {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* min-width: 320px;*/
 }
 
-.steps-img {
+.steps-frames-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,11 +273,9 @@ h3 {
     width: 100px;
     line-height: 100px;
     border-radius: 16px;
-
-
 }
 
-.steps-txt {
+.steps-frames-txt {
     margin-top: 30px;
     text-align: center;
 
@@ -301,76 +294,95 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 96px;
+    padding-top: 97px;
 }
 
-.carousel {
+.destinations-pattern {
     display: flex;
     gap: 60px;
     padding-top: 46px;
 }
 
-
-.destinationsSpain {
+.destinations-frames{
     width: 800px;
     height: 800px;
     border-radius: 16px;
+}
+
+.spain {
     background-image: url(./img/spain.jpg);
 }
 
-.destinationsJapan {
-    width: 800px;
-    height: 800px;
-    border-radius: 16px;
+.japan {
     background-image: url(./img/japan.jpg);
 }
 
-.destinationsUsa {
-    width: 800px;
-    height: 800px;
-    border-radius: 16px;
+.usa {
     background-image: url(./img/usa.jpg);
 }
 
-.btn-indicator {
+.ellipse-pattern {
     display: flex;
+    height: 20px;
     margin-top: 24px;
     gap: 10px;
 }
 
-.btn-more {
-    display: flex;
-    align-items: center;
-    width: 228px;
-    height: 59px;
-    background: #0D606F;
-    padding: 0;
-    padding-left: 33.5px;
+.btn-ellipse {
+    padding: 10px;
+    border-radius: 50%;
     border: none;
+    background-color: #f2775c86;
+    cursor: pointer;
 
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16); */
-    border-radius: 10px;
+    transition: .3s linear;
 }
 
-.btn-see-more {
+.btn-ellipse:hover {
+    background-color: #F2785C;
+}
+
+.btn-ellipse-pressed {
+    background-color: #F2785C;
+    cursor: pointer;
+}
+
+.link-see-more {
     gap: 11.5px;
     margin-top: 36px;
+    padding: 14px 33px 14px 33px;
 }
 
-.btn-find-more {
+.link-find-more {
     gap: 12.5px;
     margin-top: 40px;
+    padding: 14px 33px 14px 33px;
 }
 
-.a-btn-more {
+.link-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D606F;
+    border-radius: 10px;
+
+    transition: .3s linear;
+}
+
+.link-frame:hover {
+    background: #0d606f91;
+    cursor: pointer;
+}
+
+.link-a-style {
     text-decoration: none;
 
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 32px;
-
+    line-height: 32px;   
+    
     color: #FFFFFF;
 }
 
@@ -378,23 +390,29 @@ h3 {
 
 /******************** SECTION STORIES ********************/
 .section-stories {
-    text-align: center;
-    padding-top: 80px;
-}
+    display: flex;
+    flex-direction: column;
+text-align: center;
 
-.stories-backgr-img {
-    background-image: url(./img/footerBg.jpg);
-    background-size: cover; 
-    margin-top: 40px;
-    background-repeat: no-repeat;
+    padding-top: 80px;
 }
 
 .stories-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
+    margin-top: 40px;
+
+    background-image: url(./img/footerBg.jpg);
+    background-size: cover;
+}
+
+.stories-frame {
+    display: flex;
+    flex-direction: column;
+align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    padding-bottom: 42px;
+    padding-bottom: 40px;
 }
 
 .stories-columns {
@@ -432,7 +450,7 @@ h3 {
     box-shadow: 0px 4px 4px #0D606F;
 }
 
-.a-article {
+.read-more-link {
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 700;
@@ -441,15 +459,15 @@ h3 {
 
     color: #0D606F;
 
+    transition: .3s linear;
+}
 
+.read-more-link:hover {
+    color: #0d606faf;
 }
 
 .footer {
-    height: 60px;
-    min-height: 60px;
-    width: 100%;
-    max-width: 1440px;
-    bottom: 60px;
+    height: 61px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -467,6 +485,18 @@ h3 {
     color: #FFFFFF;
 }
 
+.rs-links {
+    display: flex;
+    height: 100%;
+    align-items: center;
+padding-left: 121px;
+gap: 18px;
+}
+
 .social-media {
-    padding-top: 4px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+padding-right: 121px;
+gap: 18px;
 }
