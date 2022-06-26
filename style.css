@@ -29,8 +29,6 @@ h1 {
 }
 
 h2 {
-    scroll-margin-top: 10px;
-    /****for anchor links with fixed position of header****/
     margin: 0;
 
     font-family: 'Red Hat Text';
@@ -56,7 +54,6 @@ h3 {
     color: #0D606F;
 }
 
-
 /* MAIN */
 .main {
     margin: auto;
@@ -67,10 +64,6 @@ h3 {
     display: flex;
     flex-direction: column;
 }
-
-
-
-
 
 /* SECTION HEADER */
 .header {
@@ -130,9 +123,10 @@ h3 {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
-
     color: #ffffff;
-    transition: 0.5s linear;
+
+    transition: 0.3s linear;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +145,7 @@ h3 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
 
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .btn-login:hover {
@@ -237,7 +231,7 @@ h3 {
     background: #0D606F;
 
     border-radius: 10px;
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .search-link:hover {
@@ -257,8 +251,9 @@ h3 {
 
 .steps-pattern {
     width: 100%;
+    max-width: 1177px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -268,10 +263,13 @@ h3 {
     align-items: center;
     padding-top: 10px;
 
-    min-width: 317px;
+
 }
 
-.steps-frames-middle {}
+.steps-frames-indent {
+    padding-left: 71px;
+}
+
 
 .steps-frames-link {
     display: flex;
@@ -284,7 +282,7 @@ h3 {
     border-radius: 16px;
     margin: 30px;
 
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .steps-frames-link:hover {
@@ -306,41 +304,41 @@ h3 {
 
 /******************** SECTION DESTINATIONS ********************/
 .section-destinations {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 97px;
 }
 
 .destinations-pattern {
-	display: flex;
-	gap: 60px;
-	padding-top: 46px;
+    display: flex;
+    gap: 60px;
+    padding-top: 46px;
 }
 
 .destinations-frames {
     display: flex;
     align-items: flex-end;
-	width: 800px;
-	height: 800px;
-	border-radius: 16px;
+    width: 800px;
+    height: 800px;
+    border-radius: 16px;
 }
 
 .spain {
- 
-	background-image: url(./img/spain.jpg);
+
+    background-image: url(./img/spain.jpg);
 
 }
 
 .japan {
 
-	background-image: url(./img/japan.jpg);
+    background-image: url(./img/japan.jpg);
 
 }
 
 .usa {
 
-	background-image: url(./img/usa.jpg);
+    background-image: url(./img/usa.jpg);
 
 }
 
@@ -371,7 +369,7 @@ h3 {
     background-color: #f2775c86;
     cursor: pointer;
 
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .btn-ellipse:hover {
@@ -386,7 +384,8 @@ h3 {
 .link-see-more {
     gap: 11.5px;
     margin-top: 36px;
-    padding: 14px 33px 14px 33px;
+    margin-left: 4px;
+    padding: 14px 40px 14px 33px;
 }
 
 .link-find-more {
@@ -402,7 +401,7 @@ h3 {
     background-color: #0D606F;
     border-radius: 10px;
 
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .link-frame:hover {
@@ -436,11 +435,10 @@ h3 {
 .stories-main {
     display: flex;
     flex-direction: column;
-
     margin-top: 40px;
-
     background-image: url(./img/footerBg.jpg);
     background-size: cover;
+
 }
 
 .stories-frame {
@@ -449,13 +447,15 @@ h3 {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
     padding-bottom: 40px;
+
 }
 
 .stories-columns {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-top: 14px;
+    width: 100%;
+    max-width: 1201px;
 }
 
 .stories-rows {
@@ -494,7 +494,7 @@ h3 {
 
     color: #0D606F;
 
-    transition: .3s linear;
+    transition: .2s linear;
 }
 
 .read-more-link:hover {
@@ -523,25 +523,30 @@ h3 {
 .rs-links {
     display: flex;
     height: 100%;
+    width: 141px;
     align-items: center;
-    padding-left: 140px;
+    margin-left: 121px;
     gap: 18px;
 }
 
 .social-media {
     display: flex;
     height: 100%;
+    width: 141px;
     align-items: center;
-    padding-right: 121px;
-    
+    margin-right: 121px;
+
 }
+
 .media-list {
     display: flex;
     gap: 18px;
     list-style: none;
     margin: 0;
+    padding-left: 0;
     height: 100%;
 }
+
 .media-list-item {
     display: flex;
     align-items: center;
