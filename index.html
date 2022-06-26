@@ -15,19 +15,50 @@
         href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Magra:wght@400;700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet">
-    <script src="./index.js"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link href="./popupStyle.css" rel="stylesheet">
+    <script async src="./index.js"></script>
 </head>
 
 <body>
 
+    <!-- POP-UP-MAIN-->
+    <div id="loginContainer" class="pop-up-container pop-up-container-hidden">
+        <div id="loginForm" class="pop-up-form">
+            <h2 class="pop-up-h2">Log in to your account</h2>
+            <button class="btn pop-up-btn-style pop-up-btn-facebook"> <img src="./svg/logoFacebook.svg" width="24"
+                    height="24" alt="logo"><span class="pop-up-btn-txt txt-color-facebook">Sign In with
+                    Facebook</span></button>
+            <button class="btn pop-up-btn-style pop-up-btn-google"> <img src="./svg/logoGoogle.svg" width="24"
+                    height="24" alt="logo"><span class="pop-up-btn-txt txt-color-google">Sign In
+                    with Google</span></button>
 
+            <div class="pop-up-separator">
+                <div class="pop-up-line"></div>
+                <p class="pop-up-line-txt">or</p>
+                <div class="pop-up-line"></div>
+            </div>
 
+            <div class="pop-up-input-frame">
+                <p class="pop-up-input-txt">E-mail</p>
+                <input type="text" class="pop-up-input pop-up-txt">
+                <p class="pop-up-input-txt">Password</p>
+                <input type="password" class="pop-up-input pop-up-txt">
+            </div>
 
-    <main class="main" id="main">
+            <button class="btn pop-up-btn-style pop-up-btn-sign-in"><span class="pop-up-btn-txt txt-color-facebook">Sign
+                    In</span></button>
+            <a class="pop-up-links" href="#">Forgot Your Password?</a>
 
+            <div class="pop-up-separator">
+                <div class="pop-up-line"></div>
+            </div>
 
+            <p class="pop-up-reg-txt">Don't have an account? <a class="pop-up-links" href="#">Register</a></p>
+        </div>
+    </div>
 
+    <main class="main">
 
         <!-- SECTION PLAN-YOUR-TRIP -->
         <section class="section-plan-your-trip">
@@ -42,7 +73,7 @@
 
                 <nav class="main-menu">
                     <ul class="menu-list">
-                        <li class="menu-list-item"><a class="a-nav" href="#main">How It Works</a></li>
+                        <li class="menu-list-item"><a class="a-nav" href="#steps">How It Works</a></li>
                         <li class="menu-list-item"><a class="a-nav" href="#trip">Plan Your Trip</a></li>
                         <li class="menu-list-item"><a class="a-nav" href="#destinations">Destinations</a></li>
                         <li class="menu-list-item"><a class="a-nav" href="#stories">Travel Stories</a></li>
@@ -56,7 +87,7 @@
 
 
             <!-- CONTENT EXPLORE -->
-            <h1 class="indent">Explore the beauty of <br>the World</h1>
+            <h1 id="trip" class="indent">Explore the beauty of <br>the World</h1>
             <p class="explore-txt indent">Receive personalized recommendations for countries, hotels, activities
                 and more</p>
             <div class="search-form indent">
@@ -71,14 +102,14 @@
         <!-- SECTION STEPS -->
         <section class="section-steps">
 
-            <h2 id="trip">3 STEPS TO THE PERFECT TRIP</h2>
+            <h2 id="steps">3 STEPS TO THE PERFECT TRIP</h2>
             <div class="steps-pattern">
                 <div class="steps-frames">
                     <a href="#" class="steps-frames-link"><img src="./svg/step1.svg" width="50" height="45"
                             alt="step"></a>
                     <p class="steps-frames-txt">Tell us what you want to do</p>
                 </div>
-                <div class="steps-frames steps-frames-middle">
+                <div class="steps-frames steps-frames-indent">
                     <a href="#" class="steps-frames-link"><img src="./svg/step2.svg" width="52" height="52"
                             alt="step"></a>
                     <p class="steps-frames-txt">Share us preferable dates</p>
