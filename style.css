@@ -12,7 +12,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background: #E5E5E5;
+    background: white;
     scroll-behavior: smooth;
 }
 
@@ -162,9 +162,23 @@ h3 {
     font-size: 16px;
     line-height: 21px;
 
-    color: #FFFFFF;
+    background-color: transparent;
 }
 
+.btn-menu-main {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 35px;
+    height: 18px;
+    border: none;
+    background-color: #0D606F;
+    gap: 4px;
+    
+    cursor: pointer;
+
+}
 
 /* SECTION PLAN-YOUR-TRIP */
 .section-plan-your-trip {
@@ -254,7 +268,6 @@ h3 {
     max-width: 1177px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .steps-frames {
@@ -550,4 +563,64 @@ h3 {
 .media-list-item {
     display: flex;
     align-items: center;
+}
+
+
+@media screen and (max-width: 390px) {
+    .header {
+        padding-top: 45px;
+        padding-right: 20px;
+        padding-bottom: 61px;
+        padding-left: 16px;
+
+        background-color: #f2775c00;
+        box-shadow: none;
+        height: auto;
+
+    }
+
+    /*display none*/
+    h1,
+    .explore-txt,
+    .logo-txt,
+    .main-menu,
+    .btn-login {
+        display: none;
+    }
+
+    .btn-menu-main{
+        display: flex;
+        background-color: #ffffff00;
+    }
+
+    .indent {
+        margin-left: 0;
+    }
+
+    .search-form {
+        margin-top: 67px;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-left: 16.55px;
+        padding-right: 9px;
+        height: 48px;
+    }
+
+    .search-form-txt {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .search-link {
+        padding: 7.5px 9px 7.5px 9px;
+font-size: 11px;
+line-height: 15px;
+    }
+
+    .section-plan-your-trip {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        padding-bottom: 61px;
+    }
+
 }
