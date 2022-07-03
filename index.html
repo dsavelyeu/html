@@ -84,16 +84,20 @@
                 <button class="btn-login"><span class="a-btn-login">Login</span></button>
 
                 <button class="btn-menu-main">
-                    <img class="btn-menu-main-line-top" src="./svgmobile/burgermenuline.svg" width="27" height="3" alt="menu">
-                    <img class="btn-menu-main-line-middle" src="./svgmobile/burgermenuline.svg" width="27" height="3" alt="menu">
-                    <img class="btn-menu-main-line-bottom" src="./svgmobile/burgermenuline.svg" width="27" height="3" alt="menu"></button>
+                    <div class="btn-menu-main_line btn-menu-main_line--top"><span> .</span><!-- menu line -->
+                    </div>
+                    <div class="btn-menu-main_line btn-menu-main_line--middle"><span> .</span><!-- menu line -->
+                    </div>
+                    <div class="btn-menu-main_line btn-menu-main_line--bottom"><span> .</span><!-- menu line -->
+                    </div>
+                </button>
 
             </header>
 
 
 
             <!-- CONTENT EXPLORE -->
-            <h1 id="trip" class="indent">Explore the beauty of <br>the World</h1>
+            <h1 id="trip" class="indent">Explore the beauty of the World</h1>
             <p class="explore-txt indent">Receive personalized recommendations for countries, hotels, activities
                 and more</p>
             <div class="search-form indent">
@@ -109,21 +113,22 @@
         <section class="section-steps">
 
             <h2 id="steps">3 STEPS TO THE PERFECT TRIP</h2>
+
             <div class="steps-pattern">
                 <div class="steps-frames">
-                    <a href="#" class="steps-frames-link"><img src="./svg/step1.svg" width="50" height="45"
-                            alt="step"></a>
-                    <p class="steps-frames-txt">Tell us what you want to do</p>
+                    <a href="#" class="steps-frames-link"><img class="steps-frames-link-img-left" src="./svg/step1.svg"
+                            width="50" height="45" alt="step"></a>
+                    <p class="steps-frames-txt steps-frames-txt-left">Tell us what you want to do</p>
                 </div>
                 <div class="steps-frames steps-frames-indent">
-                    <a href="#" class="steps-frames-link"><img src="./svg/step2.svg" width="52" height="52"
-                            alt="step"></a>
+                    <a href="#" class="steps-frames-link"><img class="steps-frames-link-img-middle"
+                            src="./svg/step2.svg" width="52" height="52" alt="step"></a>
                     <p class="steps-frames-txt">Share us preferable dates</p>
                 </div>
                 <div class="steps-frames">
-                    <a href="#" class="steps-frames-link"><img src="./svg/step3.svg" width="60" height="45"
-                            alt="step"></a>
-                    <p class="steps-frames-txt">We will give you recommendations</p>
+                    <a href="#" class="steps-frames-link"><img class="steps-frames-link-img-right" src="./svg/step3.svg"
+                            width="60" height="45" alt="step"></a>
+                    <p class="steps-frames-txt steps-frames-txt-right">We will give you recommendations</p>
                 </div>
 
             </div>
@@ -134,10 +139,12 @@
         <!-- SECTION DESTINATIONS -->
         <section class="section-destinations">
             <h2 id="destinations">POPULAR DESTINATIONS</h2>
-            <div class="destinations-pattern">
-                <div class="destinations-frames spain"><span class="country-name">SPAIN</span></div>
-                <div class="destinations-frames japan"><span class="country-name">JAPAN</span></div>
-                <div class="destinations-frames usa"><span class="country-name">USA</span></div>
+            <div class="destinations-main">
+                <div class="destinations-pattern">
+                    <div class="destinations-frames spain"><span class="country-name">SPAIN</span></div>
+                    <div class="destinations-frames japan"><span class="country-name">JAPAN</span></div>
+                    <div class="destinations-frames usa"><span class="country-name">USA</span></div>
+                </div>
             </div>
 
             <div class="ellipse-pattern">
@@ -146,7 +153,8 @@
                 <button class="btn-ellipse btn-scroll-l"></button>
             </div>
 
-            <a class="link-find-more link-frame link-a-style" href="#destinations"><img src="./svg/vector.svg" alt="->"><span>Find
+            <a class="link-find-more link-frame link-a-style" href="#destinations"><img class="link-find-more-arrow"
+                    src="./svg/vector.svg" alt="->"><span>Find
                     More</span></a>
 
 
@@ -159,8 +167,7 @@
                 <div class="stories-frame">
                     <div class="stories-columns">
                         <article class="stories-rows">
-                            <div><img class="stories-img" src="./img/storiesimg1.jpg" width="400" height="250"
-                                    alt="stories-img"></div>
+                            <div class="stories-img stories-img-1"></div>
                             <div>
                                 <h3>10 Photos of Attractive Thailand</h3>
                                 <p class="stories-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -183,8 +190,7 @@
                             </div>
                         </article>
                         <article class="stories-rows">
-                            <div><img class="stories-img" src="./img/storiesimg2.jpg" width="400" height="250"
-                                    alt="storiesImg"></div>
+                            <div class="stories-img stories-img-2"></div>
                             <div>
                                 <h3>Canyonlands National Park, Utah</h3>
                                 <p class="stories-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -207,8 +213,7 @@
                             </div>
                         </article>
                         <article class="stories-rows">
-                            <div><img class="stories-img" src="./img/storiesimg3.jpg" width="400" height="250"
-                                    alt="stories-img"></div>
+                            <div class="stories-img stories-img-3"></div>
                             <div>
                                 <h3>I left my heart in the Mountains!</h3>
                                 <p class="stories-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -231,8 +236,7 @@
                             </div>
                         </article>
                         <article class="stories-rows">
-                            <div><img class="stories-img" src="./img/storiesimg4.jpg" width="400" height="250"
-                                    alt="stories-img"></div>
+                            <div class="stories-img stories-img-4"></div>
                             <div>
                                 <h3>The Longest journey in my life!</h3>
                                 <p class="stories-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -257,7 +261,7 @@
 
                     </div>
 
-                    <a class="link-see-more link-frame link-a-style" href="#stories"><img src="./svg/vector.svg"
+                    <a class="link-see-more link-frame link-a-style" href="#stories"><img class="link-see-more-arrow" src="./svg/vector.svg"
                             alt="->"><span>See More</span></a>
 
                 </div>

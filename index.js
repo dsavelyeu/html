@@ -79,12 +79,12 @@ function burgerMenuAnimate(){
 
 /*TAP-ON*/
 function burgerMenuAnimateOn() {
-    document.querySelector(".btn-menu-main-line-top").classList.remove("btn-menu-main-off-top");
-    document.querySelector(".btn-menu-main-line-bottom").classList.remove("btn-menu-main-off-bottom");
+    document.querySelector(".btn-menu-main_line--top").classList.remove("btn-menu-main-off-top");
+    document.querySelector(".btn-menu-main_line--bottom").classList.remove("btn-menu-main-off-bottom");
 
-    document.querySelector(".btn-menu-main-line-middle").classList.add("btn-menu-main-on-middle");
-    document.querySelector(".btn-menu-main-line-top").classList.add("btn-menu-main-on-top");
-    document.querySelector(".btn-menu-main-line-bottom").classList.add("btn-menu-main-on-bottom");
+    document.querySelector(".btn-menu-main_line--middle").classList.add("btn-menu-main-on-middle");
+    document.querySelector(".btn-menu-main_line--top").classList.add("btn-menu-main-on-top");
+    document.querySelector(".btn-menu-main_line--bottom").classList.add("btn-menu-main-on-bottom");
     
     clicked = true;
     return clicked;
@@ -92,12 +92,12 @@ function burgerMenuAnimateOn() {
 /*TAP-OFF*/
 
 function burgerMenuAnimateOff() {
-    document.querySelector(".btn-menu-main-line-top").classList.remove("btn-menu-main-on-top");
-    document.querySelector(".btn-menu-main-line-bottom").classList.remove("btn-menu-main-on-bottom");
+    document.querySelector(".btn-menu-main_line--top").classList.remove("btn-menu-main-on-top");
+    document.querySelector(".btn-menu-main_line--bottom").classList.remove("btn-menu-main-on-bottom");
 
-    document.querySelector(".btn-menu-main-line-middle").classList.remove("btn-menu-main-on-middle");
-    document.querySelector(".btn-menu-main-line-top").classList.add("btn-menu-main-off-top");
-    document.querySelector(".btn-menu-main-line-bottom").classList.add("btn-menu-main-off-bottom");
+    document.querySelector(".btn-menu-main_line--middle").classList.remove("btn-menu-main-on-middle");
+    document.querySelector(".btn-menu-main_line--top").classList.add("btn-menu-main-off-top");
+    document.querySelector(".btn-menu-main_line--bottom").classList.add("btn-menu-main-off-bottom");
     
     clicked = false;
     return clicked;
