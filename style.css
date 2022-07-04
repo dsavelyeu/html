@@ -55,6 +55,59 @@ h3 {
     color: #0D606F;
 }
 
+/* BURGER-MENU */
+
+.burger-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    min-width: 169px;
+    min-height: 249px;
+    right: 0;
+
+    padding:11px 15px 30px 10px;
+    background-color: #F2785C;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px;
+}
+
+.burger-menu_menu-main{
+    min-height: 21px;
+}
+
+.burger-menu_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+    list-style: none;
+    margin: 0;
+    padding-left: 28;
+    gap: 10px;
+
+
+}
+
+.a-nav_burger {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    transition: 0.1s linear;
+}
+
+.a-nav_burger:hover {
+    color: #ffffffaf;
+    text-decoration: underline
+}
+
 /* MAIN */
 .main {
     margin: auto;
@@ -167,7 +220,9 @@ h3 {
     background-color: transparent;
 }
 
+/* BURGER-BTN*/
 .btn-menu-main {
+    
     display: none;
     padding: 0;
     flex-direction: column;
@@ -614,15 +669,19 @@ h3 {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .main-menu {
-        margin-right: 10px;
+        margin-right: 20px;
     }
-    .steps-pattern{
+
+    .steps-pattern {
         justify-content: space-around;
     }
-.steps-frames{
-    width: min-content;
-}
+
+    .steps-frames {
+        width: min-content;
+    }
+
     .steps-frames-indent {
         padding-left: 0;
     }
@@ -632,105 +691,99 @@ h3 {
         padding-right: 5px;
     }
 
-.stories-p {
+    .stories-p {
 
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 
-.stories-img {
-    min-width: 400px;
-    height: 250px;
+    .stories-img {
+        min-width: 400px;
+        height: 250px;
 
-}
+    }
 
 }
 
 @media screen and (max-width: 986px) {
 
-    h1{
+    h1 {
         font-size: 70px;
     }
 
-  h3{
-    font-size: 26px;
-  }
-.logo-txt{
-    font-size: 20px;
-    min-width: 112px;
-}
-  .a-nav {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .indent {
-    margin-left: 15px;
-  }
-.section-plan-your-trip{
-    padding-bottom: 75px;
-}
-
-.destinations-frames{
-    width: 500px;
-    height: 500px;
-}
-  .stories-img {
-    min-width: 330px;
-    height: 205px;
-    margin-right: 10px;
-
-}
-.stories-p{
-    font-size: 16px;
-    margin-top: 0;
-}
-.read-more-link{
-    font-size: 16px;
-}
-.footer-txt{
-    font-size: 12px;
-}
-    
-    }
-    .rs-links{
-        margin-left: 10px;
-    }
-    .social-media{
-        margin-right: 10px;
-    }
-   
-    
-    @media screen and (max-width: 769px) {
-
-
+    h3 {
+        font-size: 26px;
     }
 
-
-@media screen and (max-width: 390px) {
     .header {
-        padding-top: 45px;
-        padding-right: 25px;
-        padding-left: 16px;
+        flex-wrap: wrap;
+    }
 
-        background-color: #f2775c00;
-        box-shadow: none;
-        height: auto;
+    .logo-txt {
+        font-size: 20px;
+        min-width: 112px;
+    }
+
+    .a-nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .indent {
+        margin-left: 15px;
+    }
+
+    .section-plan-your-trip {
+        padding-bottom: 75px;
+    }
+
+    .destinations-frames {
+        width: 500px;
+        height: 500px;
+    }
+
+    .stories-img {
+        min-width: 330px;
+        height: 205px;
+        margin-right: 10px;
 
     }
 
-    /*display none*/
-    h1,
-    .explore-txt,
-    .logo-txt,
-    .main-menu,
-    .btn-login,
-    .rs-links,
+    .stories-p {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .read-more-link {
+        font-size: 16px;
+    }
+
     .footer-txt {
-        display: none;
+        font-size: 12px;
     }
+
+}
+
+.rs-links {
+    margin-left: 10px;
+}
+
+.social-media {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 769px) {}
+
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
 
     h2 {
         font-size: 14px;
@@ -745,10 +798,32 @@ h3 {
         line-height: 13px;
     }
 
-    .btn-menu-main {
-        display: flex;
-        background-color: #ffffff00;
+
+
+    .header {
+        padding-top: 10px;
+        height: 130px;
+
     }
+
+    .logo {
+        order: -1;
+    }
+
+    .main-menu {
+        margin-right: 0;
+    }
+
+    .a-nav {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .btn-login {
+        order: -1;
+    }
+
+
 
     .indent {
         margin-left: 0;
@@ -867,11 +942,13 @@ h3 {
         width: 100%;
         max-width: 360px;
         background-image: url(./mobile/spain.jpg);
+        background-size: cover;
 
     }
 
     .japan {
         display: none;
+        background-size: cover;
         width: 100%;
         max-width: 360px;
         background-image: url(./mobile/japan.jpg);
@@ -880,6 +957,7 @@ h3 {
 
     .usa {
         display: none;
+        background-size: cover;
         width: 100%;
         max-width: 360px;
         background-image: url(./mobile/usa.jpg);
@@ -936,7 +1014,7 @@ h3 {
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 0px;
-    margin-top: -1px;
+        margin-top: -1px;
     }
 
     .stories-img {
@@ -1015,6 +1093,37 @@ h3 {
         margin-right: 0;
         margin-top: 5px;
         margin-left: 7px;
+    }
+
+}
+
+@media screen and (max-width: 391px) {
+
+    .header {
+        padding-top: 45px;
+        padding-right: 25px;
+        padding-left: 16px;
+
+        background-color: #f2775c00;
+        box-shadow: none;
+        height: auto;
+
+    }
+
+    .btn-menu-main {
+        display: flex;
+        background-color: #ffffff00;
+    }
+
+    /*display none*/
+    h1,
+    .explore-txt,
+    .logo-txt,
+    .main-menu,
+    .btn-login,
+    .rs-links,
+    .footer-txt {
+        display: none;
     }
 
 }
