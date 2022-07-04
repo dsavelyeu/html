@@ -8,6 +8,7 @@
     animation: btn-menu-main-on-animation-top 1s;
     animation-fill-mode: forwards;
     transform-origin: 0 50%;
+  
 
 }
 
@@ -15,6 +16,7 @@
     animation: btn-menu-main-on-animation-bottom 1s;
     animation-fill-mode: forwards;
     transform-origin: 0 50%;
+  
 
 }
 
@@ -62,6 +64,8 @@
     animation: btn-menu-main-off-animation-top 1s;
     animation-fill-mode: forwards;
     transform-origin: 0 50%;
+    
+    
 
 }
 
@@ -69,6 +73,8 @@
     animation: btn-menu-main-off-animation-bottom 1s;
     animation-fill-mode: forwards;
     transform-origin: 0 50%;
+   
+ 
 
 }
 
@@ -76,7 +82,7 @@
 @keyframes btn-menu-main-off-animation-top {
 
     0% {
-        transform: translate(80%, 16px) rotate(-135deg);
+        transform: translate(23px, 16px) rotate(-135deg);
     }
 
     50% {
@@ -85,7 +91,7 @@
     }
 
     100% {
-        transform: translate(0, 0) rotate(-0);
+        transform: rotate(0);
     }
 
 }
@@ -93,7 +99,7 @@
 @keyframes btn-menu-main-off-animation-bottom {
 
     0% {
-        transform: translate(80%, -16px) rotate(135deg);
+        transform: translate(23px, -16px) rotate(135deg);
        
     }
 
@@ -105,7 +111,49 @@
     100% {
        
        
-        transform: translate(0, -0) rotate(0);
+        transform: translate(0, 0);
     }
 
 }
+
+
+/* BURGER-MENU */
+.burger-menu_display--off {
+   display: none;
+}
+
+.burger-menu_translate--l {
+    animation: moveLeft 1s;
+    animation-fill-mode: forwards;
+
+}
+.burger-menu_translate--r {
+    animation: moveRight .5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moveLeft {
+
+    from {
+        transform: translateX(100%)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+
+}
+
+@keyframes moveRight {
+
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+
+}
+

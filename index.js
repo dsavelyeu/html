@@ -78,6 +78,8 @@ function burgerMenuAnimate(){
 }
 
 /*TAP-ON*/
+let elem = document.querySelector(".btn-menu-main");
+
 function burgerMenuAnimateOn() {
     document.querySelector(".btn-menu-main_line--top").classList.remove("btn-menu-main-off-top");
     document.querySelector(".btn-menu-main_line--bottom").classList.remove("btn-menu-main-off-bottom");
@@ -85,6 +87,15 @@ function burgerMenuAnimateOn() {
     document.querySelector(".btn-menu-main_line--middle").classList.add("btn-menu-main-on-middle");
     document.querySelector(".btn-menu-main_line--top").classList.add("btn-menu-main-on-top");
     document.querySelector(".btn-menu-main_line--bottom").classList.add("btn-menu-main-on-bottom");
+
+    document.querySelector(".burger-menu").classList.remove("burger-menu_display--off");
+    document.querySelector(".burger-menu").classList.remove("burger-menu_translate--r");
+    document.querySelector(".burger-menu").classList.add("burger-menu_translate--l");
+
+    
+    elem.parentNode.removeChild(elem);
+    document.querySelector(".burger-menu_menu-main").appendChild(elem);
+
     
     clicked = true;
     return clicked;
@@ -98,6 +109,11 @@ function burgerMenuAnimateOff() {
     document.querySelector(".btn-menu-main_line--middle").classList.remove("btn-menu-main-on-middle");
     document.querySelector(".btn-menu-main_line--top").classList.add("btn-menu-main-off-top");
     document.querySelector(".btn-menu-main_line--bottom").classList.add("btn-menu-main-off-bottom");
+
+    document.querySelector(".burger-menu").classList.remove("burger-menu_translate--l");
+    document.querySelector(".burger-menu").classList.add("burger-menu_translate--r");
+
+    document.querySelector(".header").appendChild(elem);
     
     clicked = false;
     return clicked;
