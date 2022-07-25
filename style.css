@@ -476,6 +476,10 @@ h3 {
     cursor: pointer;
 }
 
+.destinations-img_left{
+    transform: rotate(180deg);
+}
+
 .ellipse-pattern {
     display: flex;
     height: 20px;

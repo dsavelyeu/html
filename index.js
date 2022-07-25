@@ -1,6 +1,6 @@
-let a = "1) Вёрстка соответствует макету. Ширина экрана 390px +48 \n";
-let b = "2) Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15 \n";
-let c = "3) На ширине экрана 390рх и меньше реализовано адаптивное меню +22 \n";
+let a = "1) Слайдер изображений в секции destinations +30 \n";
+let b = "2) Нажатие на кнопку Login (кнопка Account в мобильной версии) показывает сверстанный логин попап + 50 \n";
+let c = "3) Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение). +25 \n";
 let result = a + b + c;
 
 console.log(result);
@@ -198,15 +198,23 @@ let cell4 = document.querySelector(".dest-cell4");
 let cells = [cell0, cell1, cell2, cell3, cell4];
 let j = 0;
 let k = 0;
+let ellipseCount = 1;
 let scrolledR = false;
 let scrolledL = false;
 let scrolled = false;
+let ellipseSpain = document.querySelector(".btn-scroll-r");
+let ellipseJapan = document.querySelector(".btn-ellipse-pressed");
+let ellipseUsa = document.querySelector(".btn-scroll-l");
+let ellipses = [ellipseSpain, ellipseJapan, ellipseUsa];
 
 /* move right */
 document.querySelector(".btn-scroll-r").addEventListener("click", scrollRight);
 document.querySelector(".destinations-button_left").addEventListener("click", scrollRight);
 
 function scrollRight() {
+    for (let n = 0; n<ellipses.length; n++){
+        ellipses[n].style.setProperty('background-color', '#f2775c86');
+    }
     
     scrolledR = true;
     if(scrolled === false){
@@ -259,8 +267,15 @@ function scrollRight() {
         k = 4;
     }
     
-
-   return j,k;
+   
+        
+        ellipseCount--;
+        if(ellipseCount < 0) {
+            ellipseCount = 2;
+        }
+        ellipses[ellipseCount].style.setProperty('background-color', '#F2785C');
+        
+    
 }
 
 
@@ -268,6 +283,9 @@ function scrollRight() {
 document.querySelector(".btn-scroll-l").addEventListener("click", scrollLeft);
 document.querySelector(".destinations-button_right").addEventListener("click", scrollLeft);
 function scrollLeft() {
+    for (let n = 0; n<ellipses.length; n++){
+        ellipses[n].style.setProperty('background-color', '#f2775c86');
+    }
 
     scrolledL = true;
     if(scrolled === false){
@@ -319,5 +337,11 @@ function scrollLeft() {
         k = 0;
     }
     
-    return j,k;
+    ellipseCount++;
+    if(ellipseCount > 2) {
+        ellipseCount = 0;
+    } 
+        ellipses[ellipseCount].style.setProperty('background-color', '#F2785C');
+       
+
 }
