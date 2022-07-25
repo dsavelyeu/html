@@ -1,6 +1,6 @@
-let a = "1) Вёрстка соответствует макету. Ширина экрана 390px +48 \n";
-let b = "2) Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15 \n";
-let c = "3) На ширине экрана 390рх и меньше реализовано адаптивное меню +22 \n";
+let a = "1) Слайдер изображений в секции destinations +30 \n";
+let b = "2) Нажатие на кнопку Login (кнопка Account в мобильной версии) показывает сверстанный логин попап + 50 \n";
+let c = "3) Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение). +25 \n";
 let result = a + b + c;
 
 console.log(result);
@@ -26,14 +26,13 @@ function closeLoginForm() {
 
 	}, 500);
 
-    changeToSignIn();
+   
 }
 
 /* e.target on click (close Login form and Burger menu)*/
 document.addEventListener('click', findTarget);
 function findTarget(e) {
     if(e.target === loginContainer) {
-        console.log("close login form " + e.target);
         closeLoginForm();
     }
 
@@ -51,7 +50,7 @@ document.querySelector(".search-link").addEventListener("click", viewMSG);
 document.querySelector(".link-find-more").addEventListener("click", viewMSG);
 document.querySelector(".link-see-more").addEventListener("click", viewMSG);
 document.querySelector(".pop-up-btn-sign-in").addEventListener("click", signInAction);
-document.querySelector(".pop-up-btn-register").addEventListener("click", changeToSignUp);
+document.querySelector(".pop-up-reg-txt").addEventListener("click", changeLoginForm);
 
 function viewMSG() {
     alert(result);
@@ -66,11 +65,53 @@ function signInAction (){
     alert("login = " + login + "\n" + "password = " + password);
 }
 
-function changeToSignUp () {
-    document.querySelector(".pop-up-btn-sign-in-txt").textContent = "Sign Up";
+/* pop-up register button */
+let signButton = document.querySelector(".pop-up-btn-sign-in-txt");
+let registerText = document.querySelector(".pop-up-reg-txt");
+let hideContentFacebookBtn = document.querySelector(".pop-up-btn-facebook");
+let hideContentGoogleBtn = document.querySelector(".pop-up-btn-google");
+let hideSeparatorTop = document.querySelector(".pop-up-separator_indent--top");
+let hideForgotPassword = document.querySelector(".forgot-password");
+let popUpForm = document.querySelector(".pop-up-form");
+let popUpH2Text = document.querySelector(".pop-up-h2");
+
+let clickedRegBtn = false;
+function changeLoginForm (){
+    
+    if (!clickedRegBtn) {
+        changeToSignUpForm ();
+        changeElementsVisiability()
+        clickedRegBtn = true;
+    } else {
+        changeToSignInForm ();
+        changeElementsVisiability()
+        clickedRegBtn = false;
+    }
 }
-function changeToSignIn () {
-    document.querySelector(".pop-up-btn-sign-in-txt").textContent = "Sign In";
+function changeElementsVisiability(){
+    if (!clickedRegBtn) {
+        hideContentFacebookBtn.classList.add("hide-element");
+        hideContentGoogleBtn.classList.add("hide-element");
+        hideSeparatorTop.classList.add("hide-element");
+        hideForgotPassword.classList.add("hide-element");
+    } else {
+        hideContentFacebookBtn.classList.remove("hide-element");
+        hideContentGoogleBtn.classList.remove("hide-element");
+        hideSeparatorTop.classList.remove("hide-element");
+        hideForgotPassword.classList.remove("hide-element");
+    }
+}
+function changeToSignUpForm () {
+    signButton.textContent = "Sign Up";
+    registerText.innerHTML = "Already have an account? <span class='pop-up-btn-register pop-up-links'>Log in</span>";
+    popUpH2Text.textContent = "Create account";
+    popUpForm.style.setProperty('max-height', '436px');
+}
+function changeToSignInForm () {
+    signButton.textContent = "Sign In";
+    registerText.innerHTML = "Don't have an account? <span class='pop-up-btn-register pop-up-links'>Register</span>";
+    popUpH2Text.textContent = "Log in to your account";
+    popUpForm.style.setProperty('max-height', '660px');
 }
 
 
@@ -113,6 +154,11 @@ function burgerMenuAnimateOn() {
     return clicked;
 }
 /*tap-off*/
+let aNavLinks = document.querySelectorAll(".a-nav_burger");
+for (let i = 0; i< aNavLinks.length; i++) {
+    aNavLinks[i].addEventListener("click", burgerMenuAnimateOff)
+}
+
 
 function burgerMenuAnimateOff() {
     document.querySelector(".btn-menu-main_line--top").classList.remove("btn-menu-main-on-top");
@@ -152,13 +198,23 @@ let cell4 = document.querySelector(".dest-cell4");
 let cells = [cell0, cell1, cell2, cell3, cell4];
 let j = 0;
 let k = 0;
+let ellipseCount = 1;
 let scrolledR = false;
 let scrolledL = false;
 let scrolled = false;
+let ellipseSpain = document.querySelector(".btn-scroll-r");
+let ellipseJapan = document.querySelector(".btn-ellipse-pressed");
+let ellipseUsa = document.querySelector(".btn-scroll-l");
+let ellipses = [ellipseSpain, ellipseJapan, ellipseUsa];
 
 /* move right */
 document.querySelector(".btn-scroll-r").addEventListener("click", scrollRight);
+document.querySelector(".destinations-button_left").addEventListener("click", scrollRight);
+
 function scrollRight() {
+    for (let n = 0; n<ellipses.length; n++){
+        ellipses[n].style.setProperty('background-color', '#f2775c86');
+    }
     
     scrolledR = true;
     if(scrolled === false){
@@ -211,14 +267,25 @@ function scrollRight() {
         k = 4;
     }
     
-
-   return j,k;
+   
+        
+        ellipseCount--;
+        if(ellipseCount < 0) {
+            ellipseCount = 2;
+        }
+        ellipses[ellipseCount].style.setProperty('background-color', '#F2785C');
+        
+    
 }
 
 
 /* move left */
 document.querySelector(".btn-scroll-l").addEventListener("click", scrollLeft);
+document.querySelector(".destinations-button_right").addEventListener("click", scrollLeft);
 function scrollLeft() {
+    for (let n = 0; n<ellipses.length; n++){
+        ellipses[n].style.setProperty('background-color', '#f2775c86');
+    }
 
     scrolledL = true;
     if(scrolled === false){
@@ -270,5 +337,11 @@ function scrollLeft() {
         k = 0;
     }
     
-    return j,k;
+    ellipseCount++;
+    if(ellipseCount > 2) {
+        ellipseCount = 0;
+    } 
+        ellipses[ellipseCount].style.setProperty('background-color', '#F2785C');
+       
+
 }
