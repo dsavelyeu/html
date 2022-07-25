@@ -57,6 +57,12 @@ h3 {
 
 /* BURGER-MENU */
 
+.burger-menu_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .burger-menu {
     position: absolute;
     display: flex;
@@ -66,13 +72,13 @@ h3 {
     min-height: 249px;
     right: 0;
 
-    padding:11px 15px 30px 10px;
+    padding: 11px 15px 30px 10px;
     background-color: #F2785C;
     box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
     border-radius: 10px;
 }
 
-.burger-menu_menu-main{
+.burger-menu_menu-main {
     min-height: 21px;
 }
 
@@ -80,7 +86,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-   
+
     list-style: none;
     margin: 0;
     padding-left: 28;
@@ -222,7 +228,7 @@ h3 {
 
 /* BURGER-BTN*/
 .btn-menu-main {
-    
+
     display: none;
     padding: 0;
     flex-direction: column;
@@ -393,16 +399,12 @@ h3 {
 
 .destinations-main {
     display: flex;
-    align-items: center;
-}
-
-.destinations-pattern {
-    display: flex;
     gap: 60px;
     padding-top: 46px;
+    justify-content: flex-end;
 }
 
-.destinations-frames {
+.dest-cell {
     display: flex;
     align-items: flex-end;
     width: 800px;
@@ -428,7 +430,7 @@ h3 {
 
 }
 
-.country-name {
+.dest-txt {
     padding-left: 15px;
     padding-bottom: 40px;
     font-family: 'Red Hat Text';
@@ -739,7 +741,11 @@ h3 {
         padding-bottom: 75px;
     }
 
-    .destinations-frames {
+    .destinations-pattern {
+        gap: 30px;
+    }
+
+    .dest-cell {
         width: 500px;
         height: 500px;
     }
@@ -775,9 +781,6 @@ h3 {
 }
 
 
-@media screen and (max-width: 769px) {}
-
-
 @media screen and (max-width: 768px) {
 
     h1 {
@@ -801,28 +804,34 @@ h3 {
 
 
     .header {
-        padding-top: 10px;
-        height: 130px;
+        padding-top: 25px;
 
-    }
-
-    .logo {
-        order: -1;
     }
 
     .main-menu {
         margin-right: 0;
+        position: absolute;
+        height: 35px;
+        z-index: 1;
+        top: 0;
+
+
     }
 
     .a-nav {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 17px;
+
     }
 
     .btn-login {
-        order: -1;
+        padding: 5px 15px 5px 15px;
     }
 
+    .a-btn-login {
+        font-size: 11px;
+        line-height: 18px;
+    }
 
 
     .indent {
@@ -905,82 +914,17 @@ h3 {
         padding-left: 0;
     }
 
-    /* section destinations */
-    .section-destinations {
-        padding-top: 20px;
-    }
-
-    .destinations-main {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 390px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .destinations-frames {
-        align-items: flex-start;
-        width: 360px;
-        height: 210px;
-    }
-
-    .country-name {
-        padding-top: 8px;
-        padding-left: 15px;
-        font-size: 20px;
-        line-height: 26px;
-    }
-
     .destinations-pattern {
-        padding-top: 20px;
-        width: 100%;
+        gap: 21px;
     }
 
-    .spain {
-
-        width: 100%;
-        max-width: 360px;
-        background-image: url(./mobile/spain.jpg);
-        background-size: cover;
-
-    }
-
-    .japan {
-        display: none;
-        background-size: cover;
-        width: 100%;
-        max-width: 360px;
-        background-image: url(./mobile/japan.jpg);
-
-    }
-
-    .usa {
-        display: none;
-        background-size: cover;
-        width: 100%;
-        max-width: 360px;
-        background-image: url(./mobile/usa.jpg);
-
-    }
-
-    .ellipse-pattern {
-        height: 8px;
-        gap: 6px;
-        position: relative;
-        top: -43px;
-    }
-
-    .btn-ellipse {
-        padding: 4px;
-    }
-
-    .btn-ellipse-pressed {
-        order: -1;
+    .dest-cell {
+        width: 350px;
+        height: 350px;
     }
 
     .link-find-more {
-        margin-top: -21px;
+        margin-top: 25px;
         padding: 7px 12px 7px 12px;
         gap: 6px;
 
@@ -1097,7 +1041,7 @@ h3 {
 
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 390px) {
 
     .header {
         padding-top: 45px;
@@ -1124,6 +1068,92 @@ h3 {
     .rs-links,
     .footer-txt {
         display: none;
+    }
+
+    .steps-pattern {
+        justify-content: space-between;
+    }
+
+    /* section destinations */
+    .section-destinations {
+        padding-top: 20px;
+    }
+
+    .destinations-main {
+        display: flex;
+        align-items: flex-start;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .dest-cell {
+        align-items: flex-start;
+        width: 360px;
+        height: 210px;
+    }
+
+    .dest-txt {
+        padding-top: 8px;
+        padding-left: 15px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .destinations-pattern {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .spain {
+
+        background-image: url(./mobile/spain.jpg);
+        background-size: cover;
+
+    }
+
+    .japan {
+       
+        background-size: cover;
+        background-image: url(./mobile/japan.jpg);
+
+    }
+
+    .usa {
+
+        background-size: cover;
+        background-image: url(./mobile/usa.jpg);
+
+    }
+
+    .ellipse-pattern {
+        height: 8px;
+        gap: 6px;
+        position: relative;
+        top: -43px;
+    }
+
+    .btn-ellipse {
+        padding: 4px;
+    }
+
+    .btn-ellipse-pressed {
+        order: -1;
+    }
+
+    .link-find-more {
+        margin-top: -21px;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .stories-p {
+
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
 }

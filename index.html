@@ -18,22 +18,27 @@
     <link href="./style.css" rel="stylesheet">
     <link href="./popupStyle.css" rel="stylesheet">
     <link href="./burgermenustyle.css" rel="stylesheet">
+    <link href="./destinationsStyle.css" rel="stylesheet">
     <script async src="./index.js"></script>
 </head>
 
 <body>
     <!-- BURGER-MENU -->
-    <nav class="burger-menu burger-menu_display--off">
-        <div class="burger-menu_menu-main"></div>
-        <ul class="burger-menu_list">
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">How It Works</a></li>
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">Plan Your Trip</a></li>
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">Destinations</a></li>
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">Travel Stories</a></li>
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">Account</a></li>
-            <li class="burger-menu_list--link"><a class="a-nav_burger" href="#">Social Media</a></li>
-        </ul>
-    </nav>
+    <div class="burger-menu_container burger-menu_display--off">
+        <nav class="burger-menu burger-menu_display--off">
+            <div class="burger-menu_menu-main"></div>
+            <ul class="burger-menu_list">
+                <li class="burger-menu_list--link"><a class="a-nav_burger" href="#steps">How It Works</a></li>
+                <li class="burger-menu_list--link"><a class="a-nav_burger" href="#trip">Plan Your Trip</a></li>
+                <li class="burger-menu_list--link"><a class="a-nav_burger" href="#destinations">Destinations</a></li>
+                <li class="burger-menu_list--link"><a class="a-nav_burger" href="#stories">Travel Stories</a></li>
+                <li class="burger-menu_list--link">
+                    <p class="a-nav_burger link-login">Account</p>
+                </li>
+                <li class="burger-menu_list--link"><a class="a-nav_burger" href="#socialmedia">Social Media</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- POP-UP-MAIN-->
     <div id="loginContainer" class="pop-up-container pop-up-container-hidden">
@@ -54,12 +59,13 @@
 
             <div class="pop-up-input-frame">
                 <p class="pop-up-input-txt">E-mail</p>
-                <input type="text" class="pop-up-input pop-up-txt">
+                <input type="text" class="pop-up_login pop-up-input pop-up-txt">
                 <p class="pop-up-input-txt">Password</p>
-                <input type="password" class="pop-up-input pop-up-txt">
+                <input type="password" class="pop-up_password pop-up-input pop-up-txt">
             </div>
 
-            <button class="btn pop-up-btn-style pop-up-btn-sign-in"><span class="pop-up-btn-txt txt-color-facebook">Sign
+            <button class="btn pop-up-btn-style pop-up-btn-sign-in"><span
+                    class="pop-up-btn-sign-in-txt pop-up-btn-txt txt-color-facebook">Sign
                     In</span></button>
             <a class="pop-up-links" href="#">Forgot Your Password?</a>
 
@@ -67,7 +73,8 @@
                 <div class="pop-up-line"></div>
             </div>
 
-            <p class="pop-up-reg-txt">Don't have an account? <a class="pop-up-links" href="#">Register</a></p>
+            <p class="pop-up-reg-txt">Don't have an account? <span
+                    class="pop-up-btn-register pop-up-links">Register</span></p>
         </div>
     </div>
 
@@ -152,11 +159,11 @@
         <section class="section-destinations">
             <h2 id="destinations">POPULAR DESTINATIONS</h2>
             <div class="destinations-main">
-                <div class="destinations-pattern">
-                    <div class="destinations-frames spain"><span class="country-name">SPAIN</span></div>
-                    <div class="destinations-frames japan"><span class="country-name">JAPAN</span></div>
-                    <div class="destinations-frames usa"><span class="country-name">USA</span></div>
-                </div>
+                <div class="dest-cell0 dest-cell usa"><span class="dest-txt">USA</span></div>
+                <div class="dest-cell1 dest-cell spain"><span class="dest-txt">SPAIN</span></div>
+                <div class="dest-cell2 dest-cell japan"><span class="dest-txt">JAPAN</span></div>
+                <div class="dest-cell3 dest-cell usa"><span class="dest-txt">USA</span></div>
+                <div class="dest-cell4 dest-cell spain"><span class="dest-txt">SPAIN</span></div>
             </div>
 
             <div class="ellipse-pattern">
@@ -289,7 +296,7 @@
 
                     <p class="footer-txt">All Rights Reserved © Travel Portal</p>
 
-                    <div class="social-media">
+                    <div id="socialmedia" class="social-media">
                         <ul class="media-list">
                             <li class="media-list-item">
                                 <a href="#">
