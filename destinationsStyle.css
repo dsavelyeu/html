@@ -1,0 +1,41 @@
+/* DESTINATIONS ANIM */
+
+.dest-cell0 {
+    --vis: 0;
+    opacity: var(--vis);
+    --position: 0px;
+    transition: .8s ease;
+    transform: translateX(var(--position));
+}
+
+.dest-cell1 {
+    --vis: 100;
+    opacity: var(--vis);
+    --position: 0px;
+    transition: .8s ease;
+    transform: translateX(var(--position));
+}
+
+.dest-cell2 {
+    --vis: 100;
+    opacity: var(--vis);
+    --position: 0px;
+    transition: .8s ease;
+    transform: translateX(var(--position));
+}
+
+.dest-cell3 {
+    --vis: 100;
+    opacity: var(--vis);
+    --position: 0px;
+    transition: .8s ease;
+    transform: translateX(var(--position));
+}
+
+.dest-cell4 {
+    --vis: 0;
+    opacity: var(--vis);
+    --position: 0px;
+    transition: .8s ease;
+    transform: translateX(var(--position));
+}
