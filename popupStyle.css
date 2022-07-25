@@ -11,8 +11,6 @@
 }
 
 .pop-up-form {
-    position: relative;
-   
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     width: 100%;
     height: 100%;
@@ -21,19 +19,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 45px 23px 45px;
+    padding: 25px 45px 15px 45px;
     border-radius: 16px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
+@media screen and (max-width: 390px) {
+
+    .pop-up-form {
+        padding: 15px 24px 15px 15px;
+    }
+}
+
 .pop-up-h2 {
+    text-align: center;
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-
+    padding-bottom: 20px;
     color: #0D606F;
 }
 
@@ -53,7 +59,7 @@
 
 .pop-up-btn-facebook {
     background: #1877F2;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .pop-up-btn-txt {
@@ -80,7 +86,7 @@
 .pop-up-btn-sign-in {
     background: #0D606F;
 
-    margin-top: 25px;
+    margin-top: 24px;
 }
 
 .btn:hover {
@@ -93,7 +99,14 @@
     align-items: center;
     width: 100%;
 
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.pop-up-separator_indent--top {
+    padding-top: 10px;
+}
+.pop-up-separator_indent--bottom {
+    padding-top: 4px;
 }
 
 .pop-up-line-txt {
@@ -121,6 +134,7 @@
     flex-direction: column;
     width: 100%;
     gap: 5px;
+    padding-top: 10px;
 }
 
 .pop-up-input-txt {
@@ -131,6 +145,10 @@
     line-height: 19px;
 
     color: #0D606F;
+}
+
+.pop-up-input-txt_password--indent {
+    padding-top: 15px;
 }
 
 .pop-up-input {
@@ -178,7 +196,10 @@
 
     text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
 
-    margin-top: 20px;
+    margin-top: 22px;
+}
+.pop-up-reg-txt:hover{
+    cursor: pointer;
 }
 
 
@@ -187,14 +208,17 @@
 .pop-up-container-hidden {
     display: none;
 }
+.hide-element {
+    display: none;
+}
 
 .pop-up-form-translate {
-    animation: moveDown 1s;
+    animation: moveDown .7s;
     animation-fill-mode: forwards;
 
 }
 .pop-up-form_translate--up {
-    animation: moveUp 1s;
+    animation: moveUp .5s;
     animation-fill-mode: forwards;
 
 }

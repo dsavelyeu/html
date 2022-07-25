@@ -26,14 +26,13 @@ function closeLoginForm() {
 
 	}, 500);
 
-    changeToSignIn();
+   
 }
 
 /* e.target on click (close Login form and Burger menu)*/
 document.addEventListener('click', findTarget);
 function findTarget(e) {
     if(e.target === loginContainer) {
-        console.log("close login form " + e.target);
         closeLoginForm();
     }
 
@@ -51,7 +50,7 @@ document.querySelector(".search-link").addEventListener("click", viewMSG);
 document.querySelector(".link-find-more").addEventListener("click", viewMSG);
 document.querySelector(".link-see-more").addEventListener("click", viewMSG);
 document.querySelector(".pop-up-btn-sign-in").addEventListener("click", signInAction);
-document.querySelector(".pop-up-btn-register").addEventListener("click", changeToSignUp);
+document.querySelector(".pop-up-reg-txt").addEventListener("click", changeLoginForm);
 
 function viewMSG() {
     alert(result);
@@ -66,11 +65,53 @@ function signInAction (){
     alert("login = " + login + "\n" + "password = " + password);
 }
 
-function changeToSignUp () {
-    document.querySelector(".pop-up-btn-sign-in-txt").textContent = "Sign Up";
+/* pop-up register button */
+let signButton = document.querySelector(".pop-up-btn-sign-in-txt");
+let registerText = document.querySelector(".pop-up-reg-txt");
+let hideContentFacebookBtn = document.querySelector(".pop-up-btn-facebook");
+let hideContentGoogleBtn = document.querySelector(".pop-up-btn-google");
+let hideSeparatorTop = document.querySelector(".pop-up-separator_indent--top");
+let hideForgotPassword = document.querySelector(".forgot-password");
+let popUpForm = document.querySelector(".pop-up-form");
+let popUpH2Text = document.querySelector(".pop-up-h2");
+
+let clickedRegBtn = false;
+function changeLoginForm (){
+    
+    if (!clickedRegBtn) {
+        changeToSignUpForm ();
+        changeElementsVisiability()
+        clickedRegBtn = true;
+    } else {
+        changeToSignInForm ();
+        changeElementsVisiability()
+        clickedRegBtn = false;
+    }
 }
-function changeToSignIn () {
-    document.querySelector(".pop-up-btn-sign-in-txt").textContent = "Sign In";
+function changeElementsVisiability(){
+    if (!clickedRegBtn) {
+        hideContentFacebookBtn.classList.add("hide-element");
+        hideContentGoogleBtn.classList.add("hide-element");
+        hideSeparatorTop.classList.add("hide-element");
+        hideForgotPassword.classList.add("hide-element");
+    } else {
+        hideContentFacebookBtn.classList.remove("hide-element");
+        hideContentGoogleBtn.classList.remove("hide-element");
+        hideSeparatorTop.classList.remove("hide-element");
+        hideForgotPassword.classList.remove("hide-element");
+    }
+}
+function changeToSignUpForm () {
+    signButton.textContent = "Sign Up";
+    registerText.innerHTML = "Already have an account? <span class='pop-up-btn-register pop-up-links'>Log in</span>";
+    popUpH2Text.textContent = "Create account";
+    popUpForm.style.setProperty('max-height', '436px');
+}
+function changeToSignInForm () {
+    signButton.textContent = "Sign In";
+    registerText.innerHTML = "Don't have an account? <span class='pop-up-btn-register pop-up-links'>Register</span>";
+    popUpH2Text.textContent = "Log in to your account";
+    popUpForm.style.setProperty('max-height', '660px');
 }
 
 
@@ -113,6 +154,11 @@ function burgerMenuAnimateOn() {
     return clicked;
 }
 /*tap-off*/
+let aNavLinks = document.querySelectorAll(".a-nav_burger");
+for (let i = 0; i< aNavLinks.length; i++) {
+    aNavLinks[i].addEventListener("click", burgerMenuAnimateOff)
+}
+
 
 function burgerMenuAnimateOff() {
     document.querySelector(".btn-menu-main_line--top").classList.remove("btn-menu-main-on-top");
@@ -158,6 +204,8 @@ let scrolled = false;
 
 /* move right */
 document.querySelector(".btn-scroll-r").addEventListener("click", scrollRight);
+document.querySelector(".destinations-button_left").addEventListener("click", scrollRight);
+
 function scrollRight() {
     
     scrolledR = true;
@@ -218,6 +266,7 @@ function scrollRight() {
 
 /* move left */
 document.querySelector(".btn-scroll-l").addEventListener("click", scrollLeft);
+document.querySelector(".destinations-button_right").addEventListener("click", scrollLeft);
 function scrollLeft() {
 
     scrolledL = true;

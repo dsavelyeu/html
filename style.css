@@ -55,6 +55,7 @@ h3 {
     color: #0D606F;
 }
 
+
 /* BURGER-MENU */
 
 .burger-menu_container {
@@ -443,6 +444,38 @@ h3 {
 
 }
 
+.destinations-buttons{
+    display: flex;
+    position: relative;
+    gap: 920px;
+    min-height: 800px;
+    margin-top: -800px;
+    
+}
+.destinations-button_left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 110px;
+    min-width: 400px;
+    border: none;
+    background-color: #ffffff00;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.destinations-button_right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 110px;
+    min-width: 400px;
+    border: none;
+    background-color: #ffffff00;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
 .ellipse-pattern {
     display: flex;
     height: 20px;
@@ -750,6 +783,13 @@ h3 {
         height: 500px;
     }
 
+    .destinations-buttons{
+        gap: 530px;
+        min-height: 500px;
+        margin-top: -500px;
+    }
+
+
     .stories-img {
         min-width: 330px;
         height: 205px;
@@ -923,6 +963,12 @@ h3 {
         height: 350px;
     }
 
+    .destinations-buttons{
+        gap: 392px;
+        min-height: 350px;
+        margin-top: -350px;
+    }
+
     .link-find-more {
         margin-top: 25px;
         padding: 7px 12px 7px 12px;
@@ -1090,6 +1136,18 @@ h3 {
         align-items: flex-start;
         width: 360px;
         height: 210px;
+    }
+
+    .destinations-buttons{
+        gap: 50px;
+        min-height: 210px;
+        margin-top: -210px;
+    }
+    .destinations-button_left{
+        justify-content: flex-end;
+    }
+    .destinations-button_right{
+        justify-content: flex-start;
     }
 
     .dest-txt {
